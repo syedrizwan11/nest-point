@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    outline:0;
+    border:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --primarycolor:#480ca8;
+    --secodarycolor:#4cc9f0;
+    --colorwhite:#fff;
+    --colorblack:#000;
+    --colorhbtn:#202453;
+    --color_lightred:#f75842;
+    --colorbg:#2e3267;
+    --colorbg2:#183b7c;
+
+    --boxshadow1:0 1rem 2rem rgba(0,0,0,0.2);
+
+    --transition: all 400ms ease;
+
+    --container-lg:80%;
+    --container-med:90%;
+    --container-sm:94%;
+
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    /* background: linear-gradient(135deg, var(--primarycolor), var(--secodarycolor)); */
+    color:var(--colorwhite);
+    overflow-x: hidden;
+
+    
+}
+
+
+.container{
+    width: 80%;
+}
+.highlights{
+    /* margin-top: 10rem; */ 
+    width: 100vw;
+    text-align: center;
+}
+.highlights__container{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:2rem;
+    margin:auto auto;
+    
+}
+.highlights >h2{
+    margin: 3rem;
+}
+
+.course{
+    background: linear-gradient(135deg, var(--primarycolor), var(--secodarycolor));
+    box-shadow: var(--boxshadow1);
+    text-align: center;
+    border:1px solid transparent;
+    transition: var(--transition);
+     width:380px;
+     height: 450px;
+     margin-bottom: 1rem;
+     border-radius: 20px;
+}
+.course:hover{
+     background:var(--primarycolor);
+     background:transparent;
+     color: #000;
+     /* background: transparent; */
+    /* transform: scale(1.1); */
+    
+}
+/* .course:hover .c{
+     background:var(--primarycolor);
+     background: transparent;
+    /* transform: scale(1.1); */
+    
+.course__image{
+    /* margin: 1rem auto; */
+    width:380px;
+    height: 300px;
+}
+.course__image img{
+    width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+    /* border-radius: 50px; */
+}
+.course__info{
+    position: relative;
+    padding:1.5rem;
+    padding-top: 1rem;
+}
+.course__info p{
+    margin:1rem 0 2rem;
+}
+
+/* iconssssssssssssssssssssssssssssssssssssssssssss */
+.course__info .share {
+    display: none;
+    place-items: center;
+    width: 80%;
+    height: 3rem;
+    position: absolute;
+    bottom: 3.3rem;
+    left:2.4rem;
+    margin-top: 1rem auto;
+    grid-template-columns: auto auto auto auto;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.course:hover .course__info .share{
+    display: grid;
+
+}
+
+.course__info .share a {
+  font-size: 1.5rem;
+  margin: auto 1rem;
+  color: #fff;
+}
+
+.course__info .share a:hover {
+  color: #0b9269;
+}
+
+
+
+.btn{
+    display: inline-block;
+    background: var(--colorwhite);
+    color:var(--colorblack);
+    padding: 1rem 2rem;
+    border:1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.btn:hover{
+    background: transparent;
+    color: var(--colorwhite);
+    border-color: var(--colorwhite);
+}
+.btn2{
+background-color: var(--color_lightred);
+color: var(--colorwhite);
+}
+
+
+/* section {
+  padding: 5rem 10%;
+} */
+
+.heading-link {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primarycolor), var(--secodarycolor));
+  padding:2rem;
+}
+
+.heading-link h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: white;
+}
+
+.heading-link p {
+  font-size: 2rem;
+  line-height: 2;
+  color: white;
+}
+
+.heading-link p a {
+  color: #4ac19d;
+}
+    </style>
+</head>
+<body>
+    
+    <section class="heading-link">
+        <h3>about us</h3>
+        <p> <a href="index.html">home</a> / about </p>
+     </section>
+
+    <section class="highlights">
+        <h2>MEET OUR TEEM</h2>
+        <div class="container highlights__container">
+
+            <div class="course">
+                <div class="course__image">
+                    <img src="../public/images/user.png" alt="image">
+                </div>
+                <div class="course__info">
+                    <h4>Syed Rizwan Haider</h4>
+                    <p>FullStack Developer <br> Under Graduate <br>University of Gujrat</p>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                     </div>
+                </div>
+            </div>
+
+            <div class="course">
+                <div class="course__image">
+                    <img src="../public/images/user2.png" alt="image">
+                </div>
+                <div class="course__info">
+                    <h4>Zohaib Ahmad</h4>
+                    <p>Backend Developer <br> Under Graduate <br>University of Gujrat</p>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                     </div>
+                </div>
+            </div>
+
+            <div class="course">
+                <div class="course__image">
+                    <img src="../public/images/user3.png" alt="image">
+                </div>
+                <div class="course__info">
+                    <h4>Usman Nadeem</h4>
+                    <p>Frond End Designer <br> Under Graduate <br>University of Gujrat</p>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                     </div>
+                </div>
+            </div> 
+
+        </div>
+
+    </section>
+
+</body>
+</html>
