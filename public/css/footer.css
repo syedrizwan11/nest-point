@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* scrollbar styling */
+body::-webkit-scrollbar {
+    width: 0.6rem;  /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #4cc9f0; /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: black;    /* color of the scroll thumb */
+              /* roundness of the scroll thumb */
+    border: 3px solid #4cc9f0;  /* creates padding around scroll thumb */
+  }
+
+
+
+
+.container{
+    width: 80%;
+}
+
+footer {
+
+    background: linear-gradient(135deg, #480ca8, #4cc9f0);
+    padding: 2rem;
+    font-size: 1rem;
+    color:white;
+}
+ footer a{
+    color:white;
+ }
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:5rem;
+    margin:auto auto;
+}
+
+.footer {
+    text-align: left;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+
+footer ul li a {
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    
+}
+.footer__socials a{
+    
+    color:greenyellow;
+}
+
+.footer__socials a:hover{
+    transform: scale(1.2);
+    color:rgb(175, 81, 94);
+}
+.footer__copyright {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid black;
+}
+
+@media screen and (max-width:1024px) {
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .footer__container {
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap:2rem;
+    }
+    .footer{
+        text-align: center;
+    }
+    .container{
+        width: 94%;
+    }
+    .footer__socials{
+        justify-content: center;
+    }
+
+}

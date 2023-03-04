@@ -61,24 +61,25 @@ textarea {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+.container2 {
   width: 100%;
   padding: 2rem;
   text-align: center;
   
   background: var(--colorwhite);  
   overflow: hidden;
-
+   margin-bottom:3rem; 
+/* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
   /* display: flex;
   align-items: center;
   justify-content: center; */
 }
 
-.container>h2{
+.container2 > h2{
   margin:1rem auto;
 }
 
-.container>p{
+.container2 > p{
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }

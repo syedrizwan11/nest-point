@@ -58,6 +58,7 @@ body{
     /* margin-top: 10rem; */ 
     width: 100vw;
     text-align: center;
+    margin-bottom:2rem;
 }
 .highlights__container{
     /* display: grid;
@@ -72,6 +73,7 @@ body{
 }
 .highlights >h2{
     margin: 3rem;
+    color:#000;
 }
 
 .course{
@@ -202,7 +204,7 @@ color: var(--colorwhite);
     
     <section class="heading-link">
         <h3>about us</h3>
-        <p> <a href="index.html">home</a> / about </p>
+        <p> <a href="/index">home</a> / about </p>
      </section>
 
     <section class="highlights">
@@ -211,7 +213,7 @@ color: var(--colorwhite);
 
             <div class="course">
                 <div class="course__image">
-                    <img src="../public/images/user.png" alt="image">
+                    <img src="/images/user.png" alt="image">
                 </div>
                 <div class="course__info">
                     <h4>Syed Rizwan Haider</h4>
@@ -227,7 +229,7 @@ color: var(--colorwhite);
 
             <div class="course">
                 <div class="course__image">
-                    <img src="../public/images/user2.png" alt="image">
+                    <img src="/images/user2.png" alt="image">
                 </div>
                 <div class="course__info">
                     <h4>Zohaib Ahmad</h4>
@@ -243,7 +245,7 @@ color: var(--colorwhite);
 
             <div class="course">
                 <div class="course__image">
-                    <img src="../public/images/user3.png" alt="image">
+                    <img src="/images/user3.png" alt="image">
                 </div>
                 <div class="course__info">
                     <h4>Usman Nadeem</h4>
@@ -260,6 +262,7 @@ color: var(--colorwhite);
         </div>
 
     </section>
-
+<!-- ====================footer======================== -->
+<%- include('partials/footer'); %>
 </body>
 </html>

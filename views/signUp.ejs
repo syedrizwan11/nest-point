@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUP Page</title>
+   </head>
+<body>
+
+  <section class="heading-link">
+    <h3>Sign Un</h3>
+    <p> <a href="/index">Home</a> / <a href="/Auth/login">Login</a> / Sign Up </p>
+ </section>
+<section class="section2">
+  <div class="container">
+    <div class="cover">
+      <div class="front">
+        <img src="/images/4.jpg" alt="">
+        <!-- <div class="text">
+          <span class="text-1">Every new friend is a <br> new adventure</span>
+          <span class="text-2">Let's get connected</span>
+        </div> -->
+        <div class="text">
+          <span class="text-1">Welcome to Nestpoint Platform! <br>To get started,</span>
+          <span class="text-2">Please provide your credentials</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">SignUP</div>
+            <% if(result != '' && check==="added") { %>
+              <p style="color: rgb(25, 97, 26); font-family: Arial, Helvetica, sans-serif; text-align: center; font-weight: bolder;"><%= result %></p>
+            <% } %>
+            <% if(result != '' && check==="error") { %>
+              <p style="color: rgb(219, 54, 57); font-family: Arial, Helvetica, sans-serif; text-align: center; font-weight: bolder;"><%= result %></p>
+            <% } %>
+          <form action="/users/signUp" method="post">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" name="email" id="email" required>
+              </div>
+              <% if(result != '' && check==="conflict") { %>
+                <p style="color: red; font-family: Arial, Helvetica, sans-serif; text-align: right;"><%= result %></p>
+              <% } %>
+              <!-- <p style="color:red; margin-left:1rem"></p><%= result %></p> -->
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="input" placeholder="Enter Your username" name="username" id="username" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" name="password" id="password" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input id="confirm_password" type="password" placeholder="Enter your password again" required onkeyup='confirmpass();'>
+              </div>
+              <p id="message" style="font-family: Arial, Helvetica, sans-serif; text-align: right;"></p>
+
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <!-- <div class = "withG input-box">
+                <i class ="fas fa-user"></i>
+                <span>or login with Googe</span>
+              </div> -->
+              <div class="text sign-up-text">Already have an account? "<a href="/Auth/login">Login now</a>"</div>
+              
+            </div>
+        </form>
+      </div>
+        
+    </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  var confirmpass = function() {
+    if (document.getElementById('password').value ==
+        document.getElementById('confirm_password').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'Matched';
+    } else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Not Matched';
+        
+    }
+}
+</script>
+
+</body>
+</html>

@@ -3,22 +3,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUP Page</title>
+    <title>Login Page</title>
    </head>
 <body>
 
   <section class="heading-link">
-    <h3>Sign Up</h3>
-    <p> <a href="index.html">Home</a> / <a href="login.html">Login</a> / Sign Up </p>
+    <h3>Sign In</h3>
+    <p> <a href="/index">Home</a> / Sign In </p>
  </section>
 <section class="section2">
   <div class="container">
     <div class="cover">
       <div class="front">
-        <img src="../public/images/4.jpg" alt="">
+        <img src="/images/4.jpg" alt="">
         <!-- <div class="text">
           <span class="text-1">Every new friend is a <br> new adventure</span>
           <span class="text-2">Let's get connected</span>
@@ -33,20 +33,23 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#" method="post">
+          <form action="/Auth/login" method="post">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" placeholder="Enter your email" name="email" required>
               </div>
+              <% if(result != ''&& check==="IE") { %>
+                <p style="color: red; font-family: Arial, Helvetica, sans-serif; text-align: right"><%= result %></p>
+              <% } %>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="input" placeholder="Enter Your username" required>
+                <input type="password" placeholder="Enter your password" name="password" required>
               </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
-              </div>
+              <% if(result != ''&& check==="IP") { %>
+                <p style="color: red; font-family: Arial, Helvetica, sans-serif; text-align: right;"><%= result %></p>
+              <% } %>
+              <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
                 <input type="submit" value="Sumbit">
               </div>
@@ -54,7 +57,7 @@
                 <i class ="fas fa-user"></i>
                 <span>or login with Googe</span>
               </div> -->
-              <div class="text sign-up-text">Already have an account? "<a href="login.html">Login now</a>"</div>
+              <div class="text sign-up-text">Don't have an account? "<a href="/users/signUp">SignUp now</a>"</div>
             </div>
         </form>
       </div>
